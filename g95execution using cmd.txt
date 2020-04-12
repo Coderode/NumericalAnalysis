@@ -1,0 +1,35 @@
+Setting up Fortran in Windows
+G95 is the GNU Fortran multi-architechtural compiler, used for setting up Fortran in Windows. The windows version emulates a unix environment using MingW under windows. The installer takes care of this and automatically adds g95 to the windows PATH variable.
+
+You can get the stable version of G95 from here
+
+installer setup
+mini installer setup
+How to use G95
+During installation, g95 is automatically added to your PATH variable if you select the option “RECOMMENDED”. This means that you can simply open a new Command Prompt window and type “g95” to bring up the compiler. Find some basic commands below to get you started.
+
+Sr.No	Command & Description
+1	
+g95 –c hello.f90
+
+Compiles hello.f90 to an object file named hello.o
+
+2	
+g95 hello.f90
+
+Compiles hello.f90 and links it to produce an executable a.out
+
+3	
+g95 -c h1.f90 h2.f90 h3.f90
+
+Compiles multiple source files. If all goes well, object files h1.o, h2.o and h3.o are created
+
+4	
+g95 -o hello h1.f90 h2.f90 h3.f90
+
+Compiles multiple source files and links them together to an executable file named 'hello'
+
+Command line options for G95
+-c Compile only, do not run the linker.
+-o Specify the name of the output file, either an object file or the executable.
+Multiple source and object files can be specified at once. Fortran files are indicated by names ending in ".f", ".F", ".for", ".FOR", ".f90", ".F90", ".f95", ".F95", ".f03" and ".F03". Multiple source files can be specified. Object files can be specified as well and will be linked to form an executable file.
